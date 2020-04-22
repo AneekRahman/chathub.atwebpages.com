@@ -1,0 +1,41 @@
+<html>
+    <head>
+            <link href="indexStyle.css" type="text/css" rel="stylesheet">
+            
+    </head>
+    <body>
+        <div class="upPhoWrap">
+            <p id="upPho">Select a file:</p>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <input type="file" name="uploadPhoto" id="uploadPhoto"><br>
+                <input type="submit" name="photoSub" id="upBtn" value="UPLOAD PHOTO">
+            </form>
+        </div>
+        
+        <script
+        src="https://code.jquery.com/jquery-2.2.2.min.js"
+        integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="
+        crossorigin="anonymous"></script>
+
+        <script>
+            $('#upBtn').click(function(e) {
+                        e.preventDefault();
+                        var file_data = $('#uploadPhoto').prop('files')[0];   
+                        var form_data = new FormData();                  
+                        form_data.append('file', file_data);                            
+                        $.ajax({
+                                    url: 'uploadPhoto.php',
+                                    dataType: 'text',  // what to expect back from the PHP script, if anything
+                                    cache: false,
+                                    contentType: false,
+                                    processData: false,
+                                    data: form_data,                         
+                                    type: 'post',
+                                    success: function(php_script_response){
+                                        $("#uploadPhoto").val("");
+                                    }
+                         });
+                    });
+        </script>
+    </body>
+</html>

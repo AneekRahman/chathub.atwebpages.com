@@ -1,0 +1,90 @@
+*{
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.regiWrap{
+    background-color: rgb(190, 248, 190);
+    padding: 10px;
+    float: left;    
+}
+.regiWrap h3{
+    margin: 0 0 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    font-size: 14px;
+    text-align: center;
+
+}
+#regiBox input[type=text],#regiBox input[type=password]{
+    border: none;
+    padding: 3px 10px;
+    border-radius: 3px;
+    width: 100%;
+    background-color: rgb(78, 78, 78);
+    transition: .2s;
+    color:#fff;
+}
+#regiBox input[type=text]:focus,#regiBox input[type=password]:focus{
+    background-color: rgb(0, 0, 0);
+}    
+#regiBox input[type=submit]{
+    font-size: 14px;
+    background-color: limegreen;
+    color: #fff;
+    border-radius: 3px;
+    border:none;
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+}
+
+#regiBox{
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+#regiBox p{
+    margin: 2px 0 6px;
+    line-height: .7;
+}
+.unameWrap{
+    margin-right: 10px;
+    width: calc(50% - 5px);
+}
+.passWrap{
+    width: calc(50% - 5px);
+}
+
+.orLog{
+    margin-left: 10px;
+}
+.orLog p{
+    text-align: center;
+    font-size: 20px;
+    margin: 14px;
+}
+.orLog a{
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(0, 107, 237);
+    padding: 0 20px;
+    font-size: 20px;
+    border-radius: 3px;
+}
+.error{
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    padding: 0 5px;    
+    width: 100%;
+}
+.success{
+    background-color: greenyellow;    
+    text-align: center;
+    padding: 0 5px;    
+}
